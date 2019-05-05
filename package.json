@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/romukey/lambda-image-converter#readme",
   "dependencies": {
-    "serverless": "1.41.1"
+    "serverless": "1.41.1",
+    "serverless-plugin-stage-variables": "1.9.2"
   },
   "devDependencies": {
     "eslint": "5.12.1",
