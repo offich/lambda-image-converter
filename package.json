@@ -4,7 +4,8 @@
   "description": "image converter that runs on aws lambda",
   "main": "handler.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fix": "eslint --fix --ext .js --ignore-path .gitignore ."
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,11 @@
   "homepage": "https://github.com/romukey/lambda-image-converter#readme",
   "dependencies": {
     "serverless": "1.41.1"
+  },
+  "devDependencies": {
+    "eslint": "5.12.1",
+    "eslint-config-prettier": "4.0.0",
+    "eslint-plugin-prettier": "3.0.1",
+    "prettier": "1.16.1"
   }
 }
