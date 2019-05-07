@@ -4,7 +4,7 @@ const im = require('imagemagick')
 const aws = require('aws-sdk')
 const s3 = new aws.S3({ apiVersion: '2006-03-01' })
 
-module.exports.handler = (event, context, callback) => {
+module.exports.lambdaImageConverter = (event, context, callback) => {
   const key = 'bands/' + event.bandId + '/' + event.filename
   const bucket = event.bucket
   const params = {
