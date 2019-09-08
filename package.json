@@ -17,6 +17,9 @@
     "url": "https://github.com/romukey/lambda-image-converter/issues"
   },
   "homepage": "https://github.com/romukey/lambda-image-converter#readme",
+  "dependencies": {
+    "sharp": "0.23.0"
+  },
   "devDependencies": {
     "eslint": "6.3.0",
     "eslint-config-prettier": "6.2.0",
