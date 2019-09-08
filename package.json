@@ -17,13 +17,12 @@
     "url": "https://github.com/romukey/lambda-image-converter/issues"
   },
   "homepage": "https://github.com/romukey/lambda-image-converter#readme",
-  "dependencies": {
-    "serverless": "1.41.1"
-  },
   "devDependencies": {
-    "eslint": "5.12.1",
-    "eslint-config-prettier": "4.0.0",
-    "eslint-plugin-prettier": "3.0.1",
-    "prettier": "1.16.1"
+    "eslint": "6.3.0",
+    "eslint-config-prettier": "6.2.0",
+    "eslint-plugin-prettier": "3.1.0",
+    "npm-check-updates": "3.1.21",
+    "prettier": "1.18.2",
+    "serverless": "1.51.0"
   }
 }
