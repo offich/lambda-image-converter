@@ -2,7 +2,7 @@
 
 ## DEVELOPMENT
 - ndenv
-- node v8.10.0
+- node v10.15.3
 - serverless framework
 
 ### 準備
