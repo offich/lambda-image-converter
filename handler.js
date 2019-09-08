@@ -4,36 +4,9 @@ const path = require('path')
 const sharp = require('sharp')
 const aws = require('aws-sdk')
 const s3 = new aws.S3({ apiVersion: '2006-03-01' })
-const availableResizeWidths = ['72', '144', '198', '300', '396', '460', '600', '920']
 
-const successJson = (contentType, body, cachingDays = 7) => {
-  const date = new Date()
-  date.setDate(date.getDate() + cachingDays)
-
-  return {
-    isBase64Encoded: true,
-    statusCode: 200,
-    headers: {
-      'Content-type': contentType,
-      'Cache-Control': `max-age=${cachingDays * 60 * 60 * 24}`,
-      Expires: date.toUTCString(),
-    },
-    body,
-  }
-}
-
-const getContentType = requestedFileExtension => {
-  switch (requestedFileExtension) {
-    case '.jpg':
-      return 'image/jpeg'
-    case '.png':
-      return 'image/png'
-    case '.webp':
-      return 'image/webp'
-  }
-
-  return ''
-}
+const { availableResizeWidths } = require('common/constant')
+const { successJson, getContentType } = require('common/response')
 
 module.exports.handler = (event, context, callback) => {
   const { pathParameters, queryStringParameters, stageVariables } = event
